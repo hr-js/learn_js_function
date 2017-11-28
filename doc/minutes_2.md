@@ -1,5 +1,5 @@
-#### 第２回議事録!!!
-##引数 (chapter4.4)
+###### 第２回議事録!!!
+### 引数 (chapter4.4)
 1. JavaScriptは引数の数をチェックしない
 　→ 設定されている引数以上の数の引数を関数へ渡しても、切り捨てられる訳ではなく、argumentsオブジェクトにしまわれる
 ~~~~
@@ -68,4 +68,4 @@ function getTriangle(args){ // 引数argsに、オブジェクト{ base:5 , heig
 console.log(getTriangle({ base:5 , height:4}); // 結果：10
 ~~~~
 
-#### 完
+##### 完
