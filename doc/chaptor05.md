@@ -1,4 +1,4 @@
-# Prototypeによるオブジェクト指向
+# prototypeによるオブジェクト指向
 
 ## JavaScriptのオブジェクト指向
 
@@ -56,6 +56,10 @@
 
 - インスタンスに個別にプロパティ・メソッドを追加できる
 
+- Javaのクラスではあとからプロパティやメソッドを追加出来ないが、JSでは可能
+
+   厳密なクラス定義ができないのが、利点であり難点でもある。
+
   ```JavaScript
   const Member = function(firstName, lastName) {
     this.firstName = firstName;
@@ -73,7 +77,7 @@
   // mem2のインスタンスには`getName`は宣言されていないので実行出来ない
   console.log(mem2.getName()); // is not a function
   ```
-## prototype宣言
+## prototypeオブジェクトの宣言
 
 ### コンストラクタの問題点
 
@@ -104,7 +108,8 @@
   console.log(mem.toString());
 
   const mem2 = new Member('foo', 'bar');
-  mem2.toString = function() {
+  // toStringメソッドを再定義(オーバーライド)する
+  mem2.toString = function() {
       return this.lastName + ' ' + this.firstName;
   }
 
